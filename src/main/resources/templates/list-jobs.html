@@ -14,7 +14,7 @@
     <div>
         <table class="job-listing" th:each="job : ${jobs}">
             <tr th:each="row : ${job.keySet()}">
-                <td th:text="${row}"></td>
+                <td th:text="${#strings.capitalizeWords(row)}"></td>
                 <td th:text="${job.get(row)}"></td>
             </tr>
         </table>
